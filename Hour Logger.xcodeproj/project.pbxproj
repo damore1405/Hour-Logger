@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C931E18C1BA8CD73001B8DDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C931E18B1BA8CD73001B8DDB /* main.m */; };
+		C931E1A11BA8EDA3001B8DDB /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C931E19D1BA8EDA3001B8DDB /* HTMLNode.m */; };
+		C931E1A21BA8EDA3001B8DDB /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C931E19F1BA8EDA3001B8DDB /* HTMLParser.m */; };
+		C931E1A31BA8EDA3001B8DDB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C931E1A01BA8EDA3001B8DDB /* README.md */; };
+		C931E1AA1BA8F086001B8DDB /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C931E1A41BA8EFAD001B8DDB /* libxml2.2.dylib */; };
+		C931E1AB1BA8F086001B8DDB /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C931E1A51BA8EFAD001B8DDB /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,13 @@
 /* Begin PBXFileReference section */
 		C931E1881BA8CD73001B8DDB /* Hour Logger */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Hour Logger"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C931E18B1BA8CD73001B8DDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C931E19C1BA8EDA3001B8DDB /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		C931E19D1BA8EDA3001B8DDB /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		C931E19E1BA8EDA3001B8DDB /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		C931E19F1BA8EDA3001B8DDB /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		C931E1A01BA8EDA3001B8DDB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C931E1A41BA8EFAD001B8DDB /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		C931E1A51BA8EFAD001B8DDB /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C931E1AA1BA8F086001B8DDB /* libxml2.2.dylib in Frameworks */,
+				C931E1AB1BA8F086001B8DDB /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +55,8 @@
 		C931E17F1BA8CD73001B8DDB = {
 			isa = PBXGroup;
 			children = (
+				C931E1A41BA8EFAD001B8DDB /* libxml2.2.dylib */,
+				C931E1A51BA8EFAD001B8DDB /* libxml2.dylib */,
 				C931E18A1BA8CD73001B8DDB /* Hour Logger */,
 				C931E1891BA8CD73001B8DDB /* Products */,
 			);
@@ -57,6 +73,11 @@
 		C931E18A1BA8CD73001B8DDB /* Hour Logger */ = {
 			isa = PBXGroup;
 			children = (
+				C931E19C1BA8EDA3001B8DDB /* HTMLNode.h */,
+				C931E19D1BA8EDA3001B8DDB /* HTMLNode.m */,
+				C931E19E1BA8EDA3001B8DDB /* HTMLParser.h */,
+				C931E19F1BA8EDA3001B8DDB /* HTMLParser.m */,
+				C931E1A01BA8EDA3001B8DDB /* README.md */,
 				C931E18B1BA8CD73001B8DDB /* main.m */,
 			);
 			path = "Hour Logger";
@@ -118,6 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C931E1A11BA8EDA3001B8DDB /* HTMLNode.m in Sources */,
+				C931E1A21BA8EDA3001B8DDB /* HTMLParser.m in Sources */,
+				C931E1A31BA8EDA3001B8DDB /* README.md in Sources */,
 				C931E18C1BA8CD73001B8DDB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +229,11 @@
 		C931E1901BA8CD73001B8DDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${SDK_DIR}/usr/include/libxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +241,11 @@
 		C931E1911BA8CD73001B8DDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${SDK_DIR}/usr/include/libxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
